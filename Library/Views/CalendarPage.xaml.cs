@@ -12,8 +12,8 @@ namespace Library
 {
     public partial class CalendarPage : ContentPage
 	{
-        
-        public IEnumerable<CalendarTable> CalenderEvents { get; set; }
+
+        public IEnumerable<CalendarTable> CalenderEvents = new List<CalendarTable>();
         public List<EntityClass> Enity2 { get; set; }
         List<SpecialDate> listday;
         public bool ForceSync { get; set; }
@@ -26,13 +26,18 @@ namespace Library
             dataStore = DependencyService.Get<IDataStore>();
             displayAsync();
         }
-        public  async void displayAsync()
+        public async void displayAsync()
         {
-
-            var MainView = new StackLayout()
+            var nativeListView2 = new ExtendedListView()
             {
                 BackgroundColor = Color.White
             };
+            var MainView = new StackLayout()
+            {
+                BackgroundColor = LibInfo.Backgroundcolor
+
+            };
+
             CalenderEvents = await dataStore.GetCalendarAsync();
             Enity2 = new List<EntityClass>();
 
@@ -59,54 +64,64 @@ namespace Library
             }
             calendar = new Calendar
             {
-
-              
-                MinDate = DateTime.Now.AddDays(-1),
+                MinDate = DateTime.Now,
                 DisableAllDates = false,
                 MultiSelectDates = false,
                 SelectedTextColor = Color.Fuchsia,
                 StartDate = DateTime.Today,
-              
-                SpecialDates = listday
-              
+                SpecialDates = listday,
+                BackgroundColor = Color.White
+
             };
 
-
-
-
-
-
-           
             MainView.Padding = new Thickness(5, Device.OS == TargetPlatform.iOS ? 25 : 5, 5, 5);
 
             MainView.Children.Add(calendar);
-            var nativeListView2 = new ExtendedListView();
+
             calendar.DateClicked += (sender, e) =>
             {
 
                 System.Diagnostics.Debug.WriteLine(calendar.SelectedDates);
                 //REQUIRED: To share a scrollable view with other views in a StackLayout, it should have a VerticalOptions of FillAndExpand.
 
+
                 if (MainView.Children.Contains(nativeListView2))
                 {
                     MainView.Children.Remove(nativeListView2);
-                    nativeListView2 = new ExtendedListView();
+                    nativeListView2 = new ExtendedListView() { BackgroundColor = Color.White };
                 }
+
                 nativeListView2.VerticalOptions = LayoutOptions.FillAndExpand;
                 var select = new List<EntityClass>();
                 select = Enity2.FindAll(r => r.Description.Contains(e.DateTime.Date.ToString()));
                 nativeListView2.Items = select;
+
                 MainView.Children.Add(nativeListView2);
 
             };
-
-
-            gridMain.Content = MainView;
+            if (Device.OS == TargetPlatform.iOS)
+            {
+                MainView.BackgroundColor = Color.White;
+                ScrollView scrollView = new ScrollView()
+                {
+                    Content = MainView,
+                    Padding = new Thickness(5,0,5, 0)
+                };
+                Content = scrollView;
+            }
+            else
+                Content = MainView;
+            
         }
+
+
+
+           
+
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            calendar.SelectedDate = DateTime.Today;
+            //calendar.SelectedDate = DateTime.Today;
             displayAsync();
         }
 

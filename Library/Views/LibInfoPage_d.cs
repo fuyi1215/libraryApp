@@ -48,7 +48,6 @@ namespace Library
                     new RowDefinition{Height= GridLength.Auto},
                     new RowDefinition{Height= GridLength.Auto},
                     new RowDefinition{Height= GridLength.Auto},
-                   
                     new RowDefinition{Height= new GridLength(300,GridUnitType.Absolute)}
                     },
                     ColumnDefinitions =

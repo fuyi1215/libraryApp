@@ -42,19 +42,26 @@ namespace Library
 			//NewsTable = JsonConvert.DeserializeObject<List<NewsListItem>>(NewsString);
 			if (!initialized)
 				 Init();
-            
-            // create a file, overwriting any existing fileMySubFolder
-            IFolder folder = await rootFolder.CreateFolderAsync("Jsonfile", CreationCollisionOption.OpenIfExists);
-            IFile Newsfile = await folder.CreateFileAsync("News.json", CreationCollisionOption.OpenIfExists);
-            var json = await Newsfile.ReadAllTextAsync();
-            //populate the file with some text
-            googleNews = JsonConvert.DeserializeObject<libNewsBlog.RootObject>(json);
-
             List<NewsListItem> newlists = new List<NewsListItem>();
-            foreach (var item in googleNews.items)
+            try
             {
-                NewsListItem newslist = new NewsListItem(item);
-                newlists.Add(newslist);
+                // create a file, overwriting any existing fileMySubFolder
+                IFolder folder = await rootFolder.CreateFolderAsync("Library", CreationCollisionOption.OpenIfExists);
+                IFile Newsfile = await folder.CreateFileAsync("News.json", CreationCollisionOption.OpenIfExists);
+                var json = await Newsfile.ReadAllTextAsync();
+                //populate the file with some text
+                googleNews = JsonConvert.DeserializeObject<libNewsBlog.RootObject>(json);
+
+
+                foreach (var item in googleNews.items)
+                {
+                    NewsListItem newslist = new NewsListItem(item);
+                    newlists.Add(newslist);
+                }
+            }
+            catch(Exception)
+            {
+                
             }
             //await SyncNewsAsync();
             return await Task.Run(() => newlists);
@@ -66,17 +73,27 @@ namespace Library
 			
 			if (!initialized)
 				 Init();
-            IFolder folder = await rootFolder.CreateFolderAsync("Jsonfile", CreationCollisionOption.OpenIfExists);
-            // create a file, overwriting any existing fileMySubFolder
-            IFile Calendarfile = await folder.CreateFileAsync("Calendar.json", CreationCollisionOption.OpenIfExists);
-            var json = await Calendarfile.ReadAllTextAsync();
-            // populate the file with some text
-            CalendarTable = JsonConvert.DeserializeObject<CalendarInfo.RootObject>(json);
             List<CalendarTable> calendarTables = new List<CalendarTable>();
-            foreach(var item in CalendarTable.items)
+            try
             {
-                CalendarTable calendar = new CalendarTable(item);
-                calendarTables.Add(calendar);
+                IFolder folder = await rootFolder.CreateFolderAsync("Library", CreationCollisionOption.OpenIfExists);
+                // create a file, overwriting any existing fileMySubFolder
+                IFile Calendarfile = await folder.CreateFileAsync("Calendar.json", CreationCollisionOption.OpenIfExists);
+                var json = await Calendarfile.ReadAllTextAsync();
+                // populate the file with some text
+                CalendarTable = JsonConvert.DeserializeObject<CalendarInfo.RootObject>(json);
+                if (CalendarTable.items != null)
+                {
+                    foreach (var item in CalendarTable.items)
+                    {
+                        CalendarTable calendar = new CalendarTable(item);
+                        calendarTables.Add(calendar);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                
             }
             return await Task.Run(() => calendarTables);
 
@@ -107,7 +124,7 @@ namespace Library
                     {
 
                         NewsString = await client.GetStringAsync(LibInfo.NewUrl);
-                        IFolder folder = await rootFolder.CreateFolderAsync("Jsonfile", CreationCollisionOption.OpenIfExists);
+                        IFolder folder = await rootFolder.CreateFolderAsync("Library", CreationCollisionOption.OpenIfExists);
                         // create a file, overwriting any existing fileMySubFolder
                         IFile file = await folder.CreateFileAsync("News.json", CreationCollisionOption.OpenIfExists);
                         var json = await file.ReadAllTextAsync();
@@ -152,15 +169,16 @@ namespace Library
                 {
                     var CalendarString = await clients.GetStringAsync(Url);
 
-                    IFolder folder = await rootFolder.CreateFolderAsync("Jsonfile", CreationCollisionOption.OpenIfExists);
+                    IFolder folder = await rootFolder.CreateFolderAsync("Library", CreationCollisionOption.OpenIfExists);
                     // create a file, overwriting any existing fileMySubFolder
                     IFile file = await folder.CreateFileAsync("Calendar.json", CreationCollisionOption.OpenIfExists);
                     var json = await file.ReadAllTextAsync();
                     // populate the file with some text
 
-                    if (json != CalendarString)
+                    if (json != CalendarString && !string.IsNullOrEmpty(CalendarString))
                     {
                         await file.WriteAllTextAsync(CalendarString);
+                        CalendarTable =  JsonConvert.DeserializeObject<CalendarInfo.RootObject>(CalendarString);
                         //await sqlite.AddCalendarItems(JsonConvert.DeserializeObject<CalendarInfo.RootObject>(CalendarString));
                     }
 

@@ -54,7 +54,6 @@ namespace Library
             await MainProgressBar.ProgressTo(1, 1000, Easing.Linear);
             if (!string.IsNullOrEmpty(libary.LibName))
             {
-               
                 Application.Current.MainPage = new MainTabPage(libary);
             }
             else

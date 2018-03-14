@@ -13,18 +13,18 @@ namespace Library
 		//public string kind { get; set; }
 		public string etag { get; set; }
 		[PrimaryKey]
-		public string id { get; set; }
-		public string status { get; set; }
-		public string htmlLink { get; set; }
-		public string created { get; set; }
-		public string updated { get; set; }
+        public string id { get; set; }= String.Empty;
+        public string status { get; set; }= String.Empty;
+        public string htmlLink { get; set; }= String.Empty;
+        public string created { get; set; }= String.Empty;
+        public string updated { get; set; }= String.Empty;
         public string summary { get; set; } = String.Empty;
         public string description { get; set; } = String.Empty;
-		public string location { get; set; }
-		public string creator { get; set; }
-		public string organizer { get; set; }
+        public string location { get; set; }= String.Empty;
+        public string creator { get; set; }= String.Empty;
+        public string organizer { get; set; }= String.Empty;
         public string start { get; set; } = String.Empty;
-		public string end { get; set; }
+        public string end { get; set; }= String.Empty;
 		//public string iCalUID { get; set; }
 		//public int? sequence { get; set; }
 		//public bool? guestsCanSeeOtherGuests { get; set; }

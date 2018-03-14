@@ -6,7 +6,7 @@
 		Title = "Calendar"
 		IsBusy= "{Binding IsBusy}">
 	<ContentPage.Content >
-		<ScrollView x:Name = "gridMain" Padding="5,0,5,5">
+		<!--<ScrollView x:Name = "gridMain" Padding="5,0,5,0">-->
 		<!--<StackLayout x:Name="MainView" BackgroundColor = "White">
 				<controls:Calendar x:Name = "calendar" 
                                    Padding="10,0,10,0" 
@@ -23,7 +23,7 @@
                                    >
 				</controls:Calendar>
 		</StackLayout>-->
-	</ScrollView>
+	<!--</ScrollView>-->
 	</ContentPage.Content>
 </ContentPage>
  <!-- SelectedDate="{Binding SelectedCalendar,Mode=TwoWay}"

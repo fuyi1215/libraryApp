@@ -1,4 +1,4 @@
-﻿<Properties StartupConfiguration="{C250985B-99DF-4164-A3D4-97397DE58576}|Default">
+﻿<Properties StartupConfiguration="{0407EE71-4908-4761-8ECD-1044D59FD2E5}|Default">
   <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
@@ -7,6 +7,7 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
     <Watch file="../../../../Work/library All in one/.vs/Library/xs/Library/Views/LibInfoPage_d.cs" line="114" offsetX="321" offsetY="1695" expression="ClassId" liveUpdate="False" />
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
-  <MonoDevelop.Ide.ItemProperties.Library.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.E0E9ABE0-D84B-474C-A698-B78BFAEFECB4" />
+  <MonoDevelop.Ide.ItemProperties.Library.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.AD871D63-3BF8-4B44-8346-297537F29675" />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Library.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.1" AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" />
 </Properties>

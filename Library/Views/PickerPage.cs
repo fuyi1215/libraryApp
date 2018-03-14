@@ -87,7 +87,7 @@ namespace Library
             };
             launch.Clicked += OnbuttonClicked;
             Title = "Librarys";
-         
+            BackgroundColor = Color.White;
             // Accomodate iPhone status bar.
             this.Padding = new Thickness(10, Device.OnPlatform(20, 0, 0), 10, 5);
             Content = stackLayout;

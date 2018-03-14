@@ -39,9 +39,6 @@
     <EmbeddedResource Include="Views\WebViewPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\LibInfoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\CalendarPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -57,19 +54,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Assets\AppImages\logo_eTangibles_white_letters.png" />
-    <EmbeddedResource Include="Assets\AppImages\logo_the_library_app_full.png" />
-    <EmbeddedResource Include="Assets\ClientLogos\BentonHarborPublicLibrary.png" />
-    <EmbeddedResource Include="Assets\ClientLogos\BrooksIroquoisWashingtonPublicLibrary.png" />
-    <EmbeddedResource Include="Assets\ClientLogos\ButlerPublicLibrary.png" />
     <EmbeddedResource Include="Json\BrooksIroquoisWashingtonPublicLibrary.json" />
     <EmbeddedResource Include="Json\CrawfordsvilleDistrictPublicLibrary.json" />
-    <EmbeddedResource Include="Assets\ClientLogos\CrawfordsvilleDistrictPublicLibrary.png" />
     <EmbeddedResource Include="Json\FloraMonroeTownshipPublicLibrary.json" />
     <EmbeddedResource Include="Json\FrancesvilleSalemTownshipPublicLibrary.json" />
     <EmbeddedResource Include="Json\PerryCountyPublicLibrary.json" />
     <EmbeddedResource Include="Json\ParkeCountyPublicLibrary.json" />
     <EmbeddedResource Include="Json\GreentownPublicLibrary.json" />
+    <EmbeddedResource Include="Assets\AppImages\logo_eTangibles_white_letters.png" />
+    <EmbeddedResource Include="Assets\AppImages\logo_the_library_app_full.png" />
+    <EmbeddedResource Include="Assets\ClientLogos\BentonHarborPublicLibrary.png" />
+    <EmbeddedResource Include="Assets\ClientLogos\BrooksIroquoisWashingtonPublicLibrary.png" />
+    <EmbeddedResource Include="Assets\ClientLogos\ButlerPublicLibrary.png" />
+    <EmbeddedResource Include="Assets\ClientLogos\CrawfordsvilleDistrictPublicLibrary.png" />
     <EmbeddedResource Include="Assets\ClientLogos\PerryCountyPublicLibrary.png" />
   </ItemGroup>
   <ItemGroup>
@@ -99,9 +96,6 @@
     <Compile Include="Helpers\Utils.cs" />
     <Compile Include="Services\offlineData.cs" />
     <Compile Include="Services\OnlineDataNews.cs" />
-    <Compile Include="Views\LibInfoPage.xaml.cs">
-      <DependentUpon>LibInfoPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Model\libNews.cs" />
     <Compile Include="Model\CalendarInfo.cs" />
     <Compile Include="Helpers\NonNullToBooleanConverter.cs" />
@@ -234,8 +228,6 @@
     <Folder Include="Views\CollapseListView\" />
     <Folder Include="Json\" />
     <Folder Include="Assets\" />
-    <Folder Include="Assets\AppImages\" />
-    <Folder Include="Assets\ClientLogos\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.1.114\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.1.114\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />

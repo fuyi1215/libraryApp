@@ -17,14 +17,16 @@ namespace Library
 			InitializeComponent();
             try
             {
+                
                 var libname = database.GetlibraryName();
+
                 var json = ResourceLoader.GetEmbeddedResourceString(Assembly.Load(new AssemblyName("Library")),LibInfo.LibraryList[libname.LibraryName]);
                 var lib = JsonConvert.DeserializeObject<LibInfo.RootObject>(json);
                 MainPage = new LoadPage(lib);
             }
             catch (Exception)
             {
-                MainPage = new LoadPage();
+               MainPage = new LoadPage();
             }
 		}
 
