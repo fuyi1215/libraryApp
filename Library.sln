@@ -1,0 +1,112 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library", "Library\Library.csproj", "{85E58A5A-6BDF-42D3-8F44-8151FC03F4F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.iOS", "iOS\Library.iOS.csproj", "{C250985B-99DF-4164-A3D4-97397DE58576}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.Droid", "Droid\Library.Droid.csproj", "{0407EE71-4908-4761-8ECD-1044D59FD2E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{85E58A5A-6BDF-42D3-8F44-8151FC03F4F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85E58A5A-6BDF-42D3-8F44-8151FC03F4F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85E58A5A-6BDF-42D3-8F44-8151FC03F4F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85E58A5A-6BDF-42D3-8F44-8151FC03F4F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85E58A5A-6BDF-42D3-8F44-8151FC03F4F3}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{85E58A5A-6BDF-42D3-8F44-8151FC03F4F3}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{85E58A5A-6BDF-42D3-8F44-8151FC03F4F3}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{85E58A5A-6BDF-42D3-8F44-8151FC03F4F3}.Release|iPhone.Build.0 = Release|Any CPU
+		{85E58A5A-6BDF-42D3-8F44-8151FC03F4F3}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{85E58A5A-6BDF-42D3-8F44-8151FC03F4F3}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{85E58A5A-6BDF-42D3-8F44-8151FC03F4F3}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{85E58A5A-6BDF-42D3-8F44-8151FC03F4F3}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{C250985B-99DF-4164-A3D4-97397DE58576}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{C250985B-99DF-4164-A3D4-97397DE58576}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
+		{C250985B-99DF-4164-A3D4-97397DE58576}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C250985B-99DF-4164-A3D4-97397DE58576}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C250985B-99DF-4164-A3D4-97397DE58576}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{C250985B-99DF-4164-A3D4-97397DE58576}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{C250985B-99DF-4164-A3D4-97397DE58576}.Release|iPhone.ActiveCfg = Release|iPhone
+		{C250985B-99DF-4164-A3D4-97397DE58576}.Release|iPhone.Build.0 = Release|iPhone
+		{C250985B-99DF-4164-A3D4-97397DE58576}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{C250985B-99DF-4164-A3D4-97397DE58576}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{C250985B-99DF-4164-A3D4-97397DE58576}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{C250985B-99DF-4164-A3D4-97397DE58576}.Debug|iPhone.Build.0 = Debug|iPhone
+		{0407EE71-4908-4761-8ECD-1044D59FD2E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0407EE71-4908-4761-8ECD-1044D59FD2E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0407EE71-4908-4761-8ECD-1044D59FD2E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0407EE71-4908-4761-8ECD-1044D59FD2E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0407EE71-4908-4761-8ECD-1044D59FD2E5}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{0407EE71-4908-4761-8ECD-1044D59FD2E5}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{0407EE71-4908-4761-8ECD-1044D59FD2E5}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{0407EE71-4908-4761-8ECD-1044D59FD2E5}.Release|iPhone.Build.0 = Release|Any CPU
+		{0407EE71-4908-4761-8ECD-1044D59FD2E5}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{0407EE71-4908-4761-8ECD-1044D59FD2E5}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{0407EE71-4908-4761-8ECD-1044D59FD2E5}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{0407EE71-4908-4761-8ECD-1044D59FD2E5}.Debug|iPhone.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = None
+		$1.ResourceNamePolicy = FileFormatDefault
+		$0.TextStylePolicy = $2
+		$2.inheritsSet = null
+		$2.scope = application/android+xml
+		$2.FileWidth = 120
+		$2.TabsToSpaces = False
+		$2.inheritsScope = text/plain
+		$0.XmlFormattingPolicy = $3
+		$3.inheritsSet = null
+		$3.scope = application/android+xml
+		$3.inheritsScope = application/xml
+		$0.CSharpFormattingPolicy = $4
+		$4.IndentSwitchSection = True
+		$4.NewLinesForBracesInProperties = True
+		$4.NewLinesForBracesInAccessors = True
+		$4.NewLinesForBracesInAnonymousMethods = True
+		$4.NewLinesForBracesInControlBlocks = True
+		$4.NewLinesForBracesInAnonymousTypes = True
+		$4.NewLinesForBracesInObjectCollectionArrayInitializers = True
+		$4.NewLinesForBracesInLambdaExpressionBody = True
+		$4.NewLineForElse = True
+		$4.NewLineForCatch = True
+		$4.NewLineForFinally = True
+		$4.NewLineForMembersInObjectInit = True
+		$4.NewLineForMembersInAnonymousTypes = True
+		$4.NewLineForClausesInQuery = True
+		$4.SpacingAfterMethodDeclarationName = False
+		$4.SpaceAfterMethodCallName = False
+		$4.SpaceBeforeOpenSquareBracket = False
+		$4.inheritsSet = Mono
+		$4.inheritsScope = text/x-csharp
+		$4.scope = text/x-csharp
+		$0.StandardHeader = $5
+		$5.Text = 
+		$5.IncludeInNewFiles = True
+		$0.NameConventionPolicy = $6
+		$6.Rules = $7
+		$7.NamingRule = $8
+		$8.Name = Type Parameters
+		$8.AffectedEntity = TypeParameter
+		$8.VisibilityMask = VisibilityMask
+		$8.NamingStyle = PascalCase
+		$8.IncludeInstanceMembers = True
+		$8.IncludeStaticEntities = True
+		$8.RequiredPrefixes = $9
+		$9.String = T
+		$8.RequiredSuffixes = $10
+		$10.String = Exception
+		$0.VersionControlPolicy = $11
+		$11.inheritsSet = Mono
+	EndGlobalSection
+EndGlobal

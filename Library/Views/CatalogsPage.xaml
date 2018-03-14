@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="Library.CatalogsPage"
+		Title ="Catalog Page"
+		IsBusy= "{Binding IsBusy}">
+	
+	<ContentPage.Content Padding ="0">
+		<Grid RowSpacing="10" ColumnSpacing="0">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="auto"/>
+				<RowDefinition Height="0.5*"/>
+				<RowDefinition Height="auto"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="0.3*"/>
+				<ColumnDefinition Width="*"/>
+			    <ColumnDefinition Width="0.3*"/>
+			</Grid.ColumnDefinitions>
+
+      
+			<Button 
+				x:Name="ButtonPrintCatalog"
+				Grid.Row="1"
+					Grid.Column = "1"
+				BackgroundColor="#24678d"
+				BorderRadius="1"
+				TextColor="White" 
+				Text="Print Catalog"
+				FontSize = "25"/>
+			<Button 
+				x:Name="ButtonOnlineCatalog"
+				Grid.Row="3"
+				Grid.Column="1"
+				BackgroundColor="24678d" 
+				BorderRadius="0"
+				TextColor="White"
+				Text="Online Catalog"
+				FontSize = "25"/>
+		</Grid>
+	</ContentPage.Content>
+</ContentPage>

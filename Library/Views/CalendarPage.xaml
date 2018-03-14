@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:controls="clr-namespace:XamForms.Controls;assembly=XamForms.Controls.Calendar"
+		x:Class="Library.CalendarPage"
+		Title = "Calendar"
+		IsBusy= "{Binding IsBusy}">
+	<ContentPage.Content >
+		<ScrollView x:Name = "gridMain" Padding="5,0,5,5">
+		<!--<StackLayout x:Name="MainView" BackgroundColor = "White">
+				<controls:Calendar x:Name = "calendar" 
+                                   Padding="10,0,10,0" 
+                                   SelectedBorderWidth="4" 
+                                   DisabledBorderColor="Gray"
+                                   TitleLabelTextColor="Purple"
+                                   TitleLeftArrowTextColor="Red"
+                                   TitleRightArrowTextColor="Blue"
+                                   DisableAllDates="false"
+                                   MultiSelectDates="false"
+                                   SelectedTextColor="Fuchsia"
+
+
+                                   >
+				</controls:Calendar>
+		</StackLayout>-->
+	</ScrollView>
+	</ContentPage.Content>
+</ContentPage>
+ <!-- SelectedDate="{Binding SelectedCalendar,Mode=TwoWay}"
+                                   DateCommand="{Binding DateChosen}"-->

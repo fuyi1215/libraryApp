@@ -1,0 +1,49 @@
+﻿{
+  "borderColor": "#6D303F",
+  "backGroundColor": "#6D303F",
+  "TextColor": "#FFFFFF",
+  "NewUrl": "https://www.googleapis.com/blogger/v3/blogs/8403841252149653050/posts?fetchBodies=true&fetchImages=true&maxResults=15&orderBy=published&key=AIzaSyDITenbgoGXrlxMdMMx9XE3tTclgm5wXT8",
+  "calendarUrl": "https://www.googleapis.com/calendar/v3/calendars/bentonharborpubliclibrary2017%40gmail.com/events?orderBy=startTime&singleEvents=true&timeMin={0}-{1}-{2}T00%3A00%3A00Z&fields=items&key=AIzaSyDITenbgoGXrlxMdMMx9XE3tTclgm5wXT8", 
+  "Catalogs":"https://behpl-verso.auto-graphics.com/homepages/splash.asp?cid=BEHPL&lid=BEHPL",
+  "Barcodetype": "CODE_39",
+  "BarcodeStar": "",
+  "BarcodeEnd": "",
+  "LibName": "Benton Harbor Public Library",
+  "Items": [
+    {
+      "Id": 1,
+      "branchName": "Benton Harbor Public Library",
+      "Latitude": "42.115861",
+      "Longitude": "-86.453369",
+      "phoneNumber": "269-926-6139",
+      "Fax": "269-926-1674",
+      "email": "kboyer@bentonharborlibrary.com",
+      "LocationCode": "BH",
+      "image": "BentonHarborPublicLibrary.png",
+      "Time": {
+        "MondayOpen": "9:00 am",
+        "MondayClose": "6:00 pm",
+        "TuesdayOpen": "9:00 am",
+        "TuesdayClose": "8:00 pm",
+        "WednesdayOpen": "9:00 am",
+        "WednesdayClose": "6:00 pm",
+        "ThursdayOpen": "9:00 am", 
+        ThursdayClose : "6:00 pm", 
+        "FridayOpen": "9:00 am", 
+        "FridayClose": "6:00 pm", 
+        "SaturdayOpen": "9:00 am", 
+        "SaturdayClose": "3:00 pm", 
+        "SundayOpen": "Closed", 
+        "SundayClose": "",
+      },
+      "Address": {
+        "Street": "213 E Wall St.",
+        "City": "Benton Harbor",
+        "State": "MI",
+        "Country": "United States",
+        "zipCode": "49022",
+      }
+    },
+
+  ]
+}

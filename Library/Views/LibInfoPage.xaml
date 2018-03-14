@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+		x:Class="Library.LibInfoPage"
+		Title = "About Library"
+		IsBusy= "{Binding isBusy}">
+	<ContentPage.Content>
+		
+
+		<ScrollView x:Name = "ScrollView1" Padding="5,10,5,5"  BackgroundColor = "{Binding BackgroundColor}">
+		<Grid x:Name = "Grid1" Padding="5,0,5,0" RowSpacing="10" ColumnSpacing="10" BackgroundColor ="White">
+
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="320"/>
+
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="320"/>
+					
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width=".475*"/>
+					<ColumnDefinition Width=".05*"/>
+					<ColumnDefinition Width=".475*"/>
+				</Grid.ColumnDefinitions>
+
+				<Image VerticalOptions="Center" Grid.Row = "0" Grid.ColumnSpan = "3">
+                                    <Image.WidthRequest>
+                                        <OnPlatform x:TypeArguments="x:Double">
+                                            <OnPlatform.iOS>300</OnPlatform.iOS>
+                                            <OnPlatform.Android>300 </OnPlatform.Android>
+                                            <OnPlatform.WinPhone>315</OnPlatform.WinPhone>
+                                        </OnPlatform>
+                                    </Image.WidthRequest>
+                                    <Image.HeightRequest>
+                                        <OnPlatform x:TypeArguments="x:Double">
+                                            <OnPlatform.iOS>124</OnPlatform.iOS>
+                                            <OnPlatform.Android>124</OnPlatform.Android>
+                                            <OnPlatform.WinPhone>135</OnPlatform.WinPhone>
+                                        </OnPlatform>
+                                    </Image.HeightRequest>
+                                    <Image.Source>
+                                        <!--<UriImageSource Uri="" CacheValidity="14" />-->
+									<FileImageSource File ="lhpl.png" />
+                                    </Image.Source>
+                                </Image>
+				<Label
+					Grid.Row="1"
+					Grid.ColumnSpan="3" 
+					FontSize="Small"
+					Text="{Binding LocationHint}"
+					HorizontalOptions="Center"/>
+				<Button 
+					x:Name="ButtonCall"
+					Grid.Row="2"
+					Grid.Column ="0"
+					BorderColor = "White"
+					BackgroundColor="{Binding ButtonColor}"
+					BorderRadius="0"
+					TextColor="{Binding TextColor}" 
+					Image="phone.png"
+					Text="{Binding PhoneNumber}"
+					Command="{Binding CallCommand}"/>
+				<Label 
+					x:Name="ButtonFax"
+					Grid.Row="2"
+					Grid.Column = "2"
+					HorizontalOptions = "End"
+					Text="{Binding Fax}"/>
+				<!--<Label 
+					Grid.Row="2"
+					Grid.Column="1"
+					Grid.ColumnSpan="2"
+					VerticalOptions="Center"
+					HorizontalOptions="Center"
+					FontSize="Medium"
+					Text="{Binding PhoneNumber}"/>
+				-->
+				<Button 
+					x:Name="ButtonEmail"
+					Grid.Row="3"
+					Grid.ColumnSpan ="3"
+					BorderColor = "White"
+					BackgroundColor="{Binding ButtonColor}"
+					BorderRadius="0"
+					TextColor="{Binding TextColor}" 
+					Text="{Binding Email}"
+					Command="{Binding EmailCommand}"/>
+				
+
+
+				<Label
+					Grid.Row="4"
+					Grid.ColumnSpan="3" 
+					FontAttributes="Bold"
+					FontSize="Medium"
+					Text="Library Hours"
+					TextColor="#24678d" />
+
+				<Label 
+					Grid.Row="5"
+					Grid.Column="0"
+					Grid.ColumnSpan="2"
+					FontAttributes="Bold"
+					FontSize="Small"
+					Text="Monday"
+					VerticalOptions="Center"/>
+
+				<Label 
+					Grid.Row="5"
+					Grid.Column="2"
+					FontSize="Small"
+					Text="{Binding Monday}"
+					HorizontalOptions="End"
+					VerticalOptions="Center"/>
+
+				<Label 
+					Grid.Row="6"
+					Grid.Column="0"
+					Grid.ColumnSpan="2"
+					FontAttributes="Bold"
+					FontSize="Small"
+					Text="Tuesday"
+					VerticalOptions="Center"/>
+
+				<Label 
+					Grid.Row="6"
+					Grid.Column="2"
+					FontSize="Small"
+					Text="{Binding Tuesday}"
+					HorizontalOptions="End"
+					VerticalOptions="Center"/>
+
+				<Label 
+					Grid.Row="7"
+					Grid.Column="0"
+					Grid.ColumnSpan="2"
+					FontAttributes="Bold"
+					FontSize="Small"
+					Text="Wednesday"
+					VerticalOptions="Center"/>
+
+				<Label 
+					Grid.Row="7"
+					Grid.Column="2"
+					FontSize="Small"
+					Text="{Binding Wednesday}"
+					HorizontalOptions="End"
+					VerticalOptions="Center"/>
+
+				<Label 
+					Grid.Row="8"
+					Grid.Column="0"
+					Grid.ColumnSpan="2"
+					FontAttributes="Bold"
+					FontSize="Small"
+					Text="Thursday"
+					VerticalOptions="Center"/>
+
+				<Label 
+					Grid.Row="8"
+					Grid.Column="2"
+					FontSize="Small"
+					Text="{Binding Thursday}"
+					HorizontalOptions="End"
+					VerticalOptions="Center"/>
+
+				<Label 
+					Grid.Row="9"
+					Grid.Column="0"
+					Grid.ColumnSpan="2"
+					FontAttributes="Bold"
+					FontSize="Small"
+					Text="Friday"
+					VerticalOptions="Center"/>
+
+				<Label 
+					Grid.Row="9"
+					Grid.Column="2"
+					FontSize="Small"
+					Text="{Binding Friday}"
+					HorizontalOptions="End"
+					VerticalOptions="Center"/>
+
+				<Label 
+					Grid.Row="10"
+					Grid.Column="0"
+					Grid.ColumnSpan="2"
+					FontAttributes="Bold"
+					FontSize="Small"
+					Text="Saturday"
+					VerticalOptions="Center"/>
+
+				<Label 
+					Grid.Row="10"
+					Grid.Column="2"
+					FontSize="Small"
+					Text="{Binding Saturday}"
+					HorizontalOptions="End"
+					VerticalOptions="Center"/>
+
+				<Label 
+					Grid.Row="11"
+					Grid.Column="0"
+					Grid.ColumnSpan="2"
+					FontAttributes="Bold"
+					FontSize="Small"
+					Text="Sunday"
+					VerticalOptions="Center"/>
+
+				<Label 
+					Grid.Row="11"
+					Grid.Column="2"
+					FontSize="Small"
+					Text="{Binding Sunday}"
+					HorizontalOptions="End"
+					VerticalOptions="Center"/>
+
+
+				<Label
+					Grid.Row="12"
+					Grid.ColumnSpan="3" 
+					FontAttributes="Bold"
+					FontSize="Medium"
+					Text="Location"
+					TextColor="#24678d"/>
+
+				<!--<Label
+					Grid.Row="13"
+					Grid.Column="1" 
+					Grid.ColumnSpan="2"
+					FontSize="Small"
+					Text="{Binding Address1}"/>-->
+				<Label
+					Grid.Row="13"
+					Grid.Column="1" 
+					Grid.ColumnSpan="2"
+					FontSize="Small"
+					Text="{Binding Address2}"/>
+
+
+				<Button 
+					Grid.Row="13"
+					BorderColor = "White"
+					BackgroundColor="{Binding ButtonColor}" 
+					BorderRadius="0"
+					TextColor="{Binding TextColor}"
+					Image="navigation.png"
+					Text="Navigate"
+					Command="{Binding NavigateCommand}"
+					VerticalOptions="FillAndExpand"/>	
+				
+				<Image VerticalOptions="Center" Grid.Row = "0" Grid.ColumnSpan = "3" Source ="">
+				</Image>
+				<maps:Map Grid.Row="15" 
+						Grid.ColumnSpan="3" 
+			            x:Name="MyMap"
+			            IsShowingUser="true"
+		        	    MapType="Hybrid"/>
+
+				
+
+
+				</Grid>
+			</ScrollView>
+				
+		
+	</ContentPage.Content>
+</ContentPage>

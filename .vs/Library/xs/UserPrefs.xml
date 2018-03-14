@@ -1,0 +1,12 @@
+﻿<Properties StartupConfiguration="{C250985B-99DF-4164-A3D4-97397DE58576}|Default">
+  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="../../../../Work/library All in one/.vs/Library/xs/Library/Views/LibInfoPage_d.cs" line="114" offsetX="321" offsetY="1695" expression="ClassId" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+  <MonoDevelop.Ide.ItemProperties.Library.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.E0E9ABE0-D84B-474C-A698-B78BFAEFECB4" />
+  <MultiItemStartupConfigurations />
+</Properties>

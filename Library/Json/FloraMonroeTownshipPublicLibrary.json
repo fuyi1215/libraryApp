@@ -1,0 +1,49 @@
+﻿{
+  "borderColor": "#24678d",
+  "backGroundColor": "#24678d",
+  "TextColor": "#FFFFFF",
+  "NewUrl": "https://www.googleapis.com/blogger/v3/blogs/2985865981908778715/posts?fetchBodies=true&fetchImages=true&maxResults=15&orderBy=published&key=AIzaSyBusl7GI08LPb7aQu_710maSQq-LT06Ezk",
+  "CalendarUrl": "https://www.googleapis.com/calendar/v3/calendars/publiclibrarybutler%40gmail.com/events?orderBy=startTime&singleEvents=true&timeMin={0}-{1}-{2}T00%3A00%3A00Z&fields=items&key=AIzaSyBusl7GI08LPb7aQu_710maSQq-LT06Ezk", 
+  "Catalogs":"https://evergreen.lib.in.us/eg/opac/home",
+  "Barcodetype": "CODE_39",
+  "BarcodeStar": "",
+  "BarcodeEnd": "",
+  "LibName": "Flora Monroe Township Public Library",
+  "Items": [
+    {
+      "Id": 1,
+      "branchName": "Flora Monroe Township Public Library",
+      "Latitude": "41.4272009",
+      "Longitude": "-84.8712149999",
+      "phoneNumber": "260-868-2351",
+      "Fax": "260-868-5491",
+      "email": "staff@butlerconstlibrary.net",
+      "LocationCode": "BU",
+      "image": "ButlerPublicLibrary.png",
+      "Time": {
+        "MondayOpen": "10:00 am",
+        "MondayClose": "7:00 pm",
+        "TuesdayOpen": "10:00 am",
+        "TuesdayClose": "7:00 pm",
+        "WednesdayOpen": "10:00 am",
+        "WednesdayClose": "7:00 pm",
+        "ThursdayOpen": "10:00 am", 
+        ThursdayClose : "7:00 pm", 
+        "FridayOpen": "Closed", 
+        "FridayClose": "", 
+        "SaturdayOpen": "9:00 am", 
+        "SaturdayClose": "1:00 pm", 
+        "SundayOpen": "Closed", 
+        "SundayClose": "",
+      },
+      "Address": {
+        "Street": "340 South Broadway Street",
+        "City": "Butler",
+        "State": "IN",
+        "Country": "United States",
+        "zipCode": "46721",
+      }
+    },
+
+  ]
+}

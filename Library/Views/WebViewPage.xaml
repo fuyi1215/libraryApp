@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		x:Class="Library.WebViewPage" Title = "">
+	<ContentPage.Content>
+		
+			<Grid Padding="5,15,5,5">
+				<Grid.RowDefinitions>
+
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="*"/>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+				<ColumnDefinition Width= "*"/>
+				<ColumnDefinition Width = "Auto"/>
+				<ColumnDefinition Width ="*"/>
+				</Grid.ColumnDefinitions>
+				
+				<!--StackLayout x:Name ="stackLayout" Orientation ="Horizontal"  -->
+				<Button x:Name ="stackLayout" Grid.Row ="0" Grid.Column = "0" Text="Back" HorizontalOptions="Start" Clicked="backClicked" TextColor ="White" />
+                <!--Button Grid.Row = "0" Text="Forward" HorizontalOptions="End" Clicked="forwardClicked"  /-->
+				
+				<!--/StackLayout-->
+				<Label x:Name ="LabelC" Grid.Row = "0" Text="Catalog" TextColor ="White" HorizontalOptions="CenterAndExpand" FontSize ="30"  Grid.Column ="1" />
+            	<WebView x:Name="Browser" Grid.Row ="1" Grid.ColumnSpan="3" />
+   
+			</Grid>
+		
+	<!--/ScrollView-->
+	</ContentPage.Content>
+</ContentPage>

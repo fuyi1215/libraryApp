@@ -1,0 +1,3 @@
+Values/arrays.xml;values/arrays.xml
+Values/attrs.xml;values/attrs.xml
+Values/style.xml;values/style.xml

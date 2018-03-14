@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:Zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
+	xmlns:ZxingCommon="clr-namespace:ZXing.Common;assembly=zxing.portable"
+	x:Class="Library.BarCodePageX">
+	<ContentPage.Content>
+		<ScrollView x:Name="scrollview" Padding="5,10,5,5" BackgroundColor="{Binding lib.backGroundColor}">
+		<Grid Padding="5,0,5,0" RowSpacing="10" ColumnSpacing="10" BackgroundColor ="White">
+
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width=".02*"/>
+					<ColumnDefinition Width=".9*"/>
+					<ColumnDefinition Width=".06*"/>
+					<ColumnDefinition Width=".02*"/>
+				</Grid.ColumnDefinitions>
+				<!--<Button 
+						x:Name ="ButtonAdd"
+						Text ="+"
+						FontSize ="Large"
+						Grid.Row ="0"
+						Grid.Column ="2"
+						BorderColor ="Black"
+						BackgroundColor ="White"
+						HorizontalOptions="End"
+						Image=""
+						/>-->
+				<Zxing:ZXingBarcodeImageView
+                x:Name="barcode"
+            	HorizontalOptions="Fill" VerticalOptions="Fill"
+            	WidthRequest="450" HeightRequest="100"
+            	Grid.Row = "2"
+				Grid.ColumnSpan = "4"
+            	BarcodeFormat="{Binding barcodeType}"
+            	BarcodeValue ="{Binding LibrarycardValue}">
+            	<Zxing:ZXingBarcodeImageView.BarcodeOptions>
+                <ZxingCommon:EncodingOptions Width="450" Height="100" />
+            	</Zxing:ZXingBarcodeImageView.BarcodeOptions>
+        		</Zxing:ZXingBarcodeImageView>
+				<!--<Label Grid.Row ="3" Grid.ColumnSpan = "4" Text="{Binding LibrarycardValue}" HorizontalOptions ="Center">
+				</Label>-->
+
+				<Entry x:Name= "Entry1" Text="{Binding cardValue}" Grid.Row ="3" Grid.ColumnSpan ="4"  Placeholder ="Enter Your Library Card Number"></Entry>
+				<Button x:Name ="button" Text ="Save" Grid.Row="4" Grid.ColumnSpan ="4" Command="{Binding SaveBarCodeCommand}" ></Button>
+				</Grid>
+			</ScrollView>
+	</ContentPage.Content>
+</ContentPage>

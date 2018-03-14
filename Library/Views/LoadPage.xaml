@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Library"
+             x:Class="Library.LoadPage"
+             BackgroundColor="White">
+
+    
+    <ContentPage.Content>
+        <Grid VerticalOptions="Center"
+              Margin="20, 0, 20, 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>    <!--Blank Space-->
+                <RowDefinition Height="Auto"/>  <!--logoTheLibraryApp-->
+                <RowDefinition Height="4*"/>    <!--Blank Space-->
+                <RowDefinition Height="Auto"/>  <!--labelStatus-->
+                <RowDefinition Height="Auto"/>  <!--progressBar-->
+                <RowDefinition Height="2*"/>    <!--Blank Space-->
+                <RowDefinition Height="Auto"/>  <!--Designed & Distributed by-->
+                <RowDefinition Height="Auto"/>  <!--logoEtangibles-->
+                <RowDefinition Height="1.9*"/>  <!--Blank Space-->
+            </Grid.RowDefinitions>
+
+            <Image x:Name="logoTheLibraryApp"
+                   Grid.Row="1"
+                   Aspect="AspectFit"
+                   HorizontalOptions="FillAndExpand"
+                   Margin="10, 0, 10, 0"/>
+
+            <Label x:Name="statusLabel"
+                   Grid.Row="3"
+                   Text="Updating Content"
+                   TextColor="Black"
+                   FontSize = "16"
+                   HorizontalOptions = "CenterAndExpand"/>
+            
+            <ProgressBar x:Name= "MainProgressBar"
+                         Grid.Row="4"
+                         Progress="0.2"
+                         WidthRequest = "175"
+                         HorizontalOptions ="Center"/>
+
+            <Label Grid.Row="6"
+                   Text="Designed&#x0a;&amp; Distributed by:"
+                   TextColor="Black"
+                   FontSize="12"
+                   Margin="38, 0, 0, -12"/>
+            
+            <Image x:Name="logoEtangibles"
+                   Grid.Row="7"
+                   Aspect="AspectFit"
+                   HorizontalOptions="FillAndExpand"
+                   Margin="10, 0, 10, 0"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

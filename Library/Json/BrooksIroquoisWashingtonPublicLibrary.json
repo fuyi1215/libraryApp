@@ -1,0 +1,50 @@
+﻿{
+  "borderColor": "#818181",
+  "backGroundColor": "#818181",
+  "TextColor": "#FFFFFF",
+  "NewUrl": "https://www.googleapis.com/blogger/v3/blogs/3787312302643364366/posts?fetchBodies=true&fetchImages=true&maxResults=15&orderBy=published&key=AIzaSyBIRUy8TEA0E5Syb0zPf3TCCkUgx2YtfM8",
+  "CalendarUrl": "https://www.googleapis.com/calendar/v3/calendars/brooksiroquoiswashingtonpl%40gmail.com/events?orderBy=startTime&singleEvents=true&timeMin={0}-{1}-{2}T00%3A00%3A00Z&fields=items&key=AIzaSyBIRUy8TEA0E5Syb0zPf3TCCkUgx2YtfM8", 
+  "Catalogs":"http://mail.brook.lib.in.us/m5/catalog/(S(e5slbodlgrfawpln2tpiouxx))/Default.aspx?&session=new&installation=Default",
+  "Barcodetype": "CODABAR",
+  "BarcodeStar": "A",
+  "BarcodeEnd": "B",
+  "LibName":"Brooks-Iroquois-Washington Public Library",
+  "Items": [
+    {
+      "Id": 1,
+      "branchName": "Brooks-Iroquois-Washington Public Library",
+      "Latitude": "40.8658931",
+      "Longitude": "-87.3638596001",
+      "phoneNumber": "219-275-2471",
+      "Fax": "219-275-8471",
+      "email": "director@brook.lib.in.us",
+      "LocationCode": "BU",
+      "image": "BrooksIroquoisWashingtonPublicLibrary.png",
+      "Time": {
+        "MondayOpen": "9:00 am",
+        "MondayClose": "7:00 pm",
+        "TuesdayOpen": "9:00 am",
+        "TuesdayClose": "5:00 pm",
+        "WednesdayOpen": "9:00 am",
+        "WednesdayClose": "7:00 pm",
+        "ThursdayOpen": "Closed", 
+        ThursdayClose : "", 
+        "FridayOpen": "9:00 am", 
+        "FridayClose": "7:00 pm", 
+        "SaturdayOpen": "9:00 am", 
+        "SaturdayClose": "1:00 pm", 
+        "SundayOpen": "Closed", 
+        "SundayClose": "",
+      },
+      "Address": {
+        
+        "Street": "100 W Main Street",
+        "City": "Brook",
+        "State": "IN",
+        "Country": "United States",
+        "zipCode": "47922",
+      }
+    },
+
+  ]
+}

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="Library.NewsPhonePage"
+		Title="News"
+		IsBusy="{Binding IsBusy}">
+    <ContentPage.Content>
+		
+        <StackLayout BackgroundColor ="{Binding backgroundcolor}" Padding="5,0,5,0" >
+            <StackLayout HorizontalOptions="CenterAndExpand" 
+                         Orientation="Horizontal" 
+                         Spacing="10" Padding="5" 
+                         IsVisible="{Binding IsBusy}" 
+                         BackgroundColor ="Gray">
+                <StackLayout.Orientation>
+                    <OnPlatform x:TypeArguments="StackOrientation" iOS="Horizontal" Android="Horizontal" WinPhone="Vertical"/>               
+                </StackLayout.Orientation>
+                <ActivityIndicator  HorizontalOptions="Center"
+								   IsRunning="{Binding IsBusy}"
+								   IsVisible="{Binding IsBusy}"/>
+                <Label HorizontalOptions="Center"
+			    	 VerticalOptions="Center"
+			    	 Text="Loading..."/>
+            </StackLayout>
+            <ListView
+				x:Name="NewsList"
+                BackgroundColor="White"
+                SelectedItem="{Binding SelectedNews, Mode=TwoWay}"
+				ItemsSource="{Binding NewsList}"
+				IsGroupingEnabled="false"
+                IsPullToRefreshEnabled="True"
+                RefreshCommand="{Binding RefreshCommand}"
+                IsRefreshing="{Binding IsRefreshing}"
+            	HasUnevenRows="true">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.Padding>
+                                    <OnPlatform x:TypeArguments="Thickness">
+                                        <OnPlatform.iOS>
+                                            5,5,5,5
+                                        </OnPlatform.iOS>
+                                        <OnPlatform.Android>
+                                            5,5,5,5
+                                        </OnPlatform.Android>
+                                        <OnPlatform.WinPhone>
+                                            20,25,20,25
+                                        </OnPlatform.WinPhone>
+                                    </OnPlatform>
+                                </Grid.Padding>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image VerticalOptions="Center">
+                                    <Image.WidthRequest>
+                                        <OnPlatform x:TypeArguments="x:Double">
+                                            <OnPlatform.iOS>55</OnPlatform.iOS>
+                                            <OnPlatform.Android>65 </OnPlatform.Android>
+                                            <OnPlatform.WinPhone>85</OnPlatform.WinPhone>
+                                        </OnPlatform>
+                                    </Image.WidthRequest>
+                                    <Image.HeightRequest>
+                                        <OnPlatform x:TypeArguments="x:Double">
+                                            <OnPlatform.iOS>55</OnPlatform.iOS>
+                                            <OnPlatform.Android>75</OnPlatform.Android>
+                                            <OnPlatform.WinPhone>95</OnPlatform.WinPhone>
+                                        </OnPlatform>
+                                    </Image.HeightRequest>
+                                    <Image.Source>
+                                        <UriImageSource Uri="{Binding pictureURL}" CacheValidity="14" CachingEnabled="true"/>
+                                    </Image.Source>
+                                </Image>
+                                <StackLayout Grid.Column="1" 
+                                             Padding="8"
+                                             Spacing="4"
+                                             VerticalOptions="CenterAndExpand">
+                                    <Label Text="{Binding title}" FontSize="Medium"  TextColor="#3498DB" LineBreakMode="WordWrap"/>
+                                    <Label Text="{Binding contentP}" FontSize="Small" LineBreakMode="TailTruncation"/>
+                                </StackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
