@@ -1,5 +1,11 @@
 ﻿<Properties StartupConfiguration="{0407EE71-4908-4761-8ECD-1044D59FD2E5}|Default">
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Library/Json/GreentownPublicLibrary.json">
+    <Files>
+      <File FileName="../Work/Lincoln Heritage Public Library/Library/Views/BarCodePageX.xaml" Line="1" Column="1" />
+      <File FileName="Library/Model/LibInfo.cs" Line="22" Column="80" />
+      <File FileName="Library/Json/GreentownPublicLibrary.json" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

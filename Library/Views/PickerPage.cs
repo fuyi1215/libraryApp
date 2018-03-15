@@ -4,14 +4,14 @@ using System.Reflection;
 using Newtonsoft.Json;
 using Plugin.EmbeddedResource;
 using Xamarin.Forms;
-
+using PCLStorage;
 namespace Library
 {
     public class PickerPage : ContentPage
     {
         
         Database database = new Database();
-
+        IFolder rootFolder = FileSystem.Current.LocalStorage;
         LibInfo.RootObject lib = new LibInfo.RootObject();
         Picker picker = new Picker()
         {
@@ -92,11 +92,20 @@ namespace Library
             this.Padding = new Thickness(10, Device.OnPlatform(20, 0, 0), 10, 5);
             Content = stackLayout;
         }
+        async void deletefile()
+        {
+            IFolder folder = await rootFolder.CreateFolderAsync("Library", CreationCollisionOption.OpenIfExists);
+            // create a file, overwriting any existing fileMySubFolder
+            IFile Calendarfile = await folder.CreateFileAsync("Calendar.json", CreationCollisionOption.OpenIfExists);
+            await folder.DeleteAsync();
+           
+        }
         void OnbuttonClicked(object sender, EventArgs e)
         {
             if (picker.SelectedItem != null)
             {
                 database.DeleteAlltable();
+                deletefile();
                 Application.Current.MainPage = new LoadPage(lib);
                 database.Addlibrary(lib);
             }

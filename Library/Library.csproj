@@ -68,6 +68,12 @@
     <EmbeddedResource Include="Assets\ClientLogos\ButlerPublicLibrary.png" />
     <EmbeddedResource Include="Assets\ClientLogos\CrawfordsvilleDistrictPublicLibrary.png" />
     <EmbeddedResource Include="Assets\ClientLogos\PerryCountyPublicLibrary.png" />
+    <EmbeddedResource Include="Assets\ClientLogos\FloraMonroeTownshipPublicLibrary.png" />
+    <EmbeddedResource Include="Assets\ClientLogos\FrancesvilleSalemTownshipPublicLibrary.png" />
+    <EmbeddedResource Include="Assets\ClientLogos\LincolnHeritagePublicLibrary.png" />
+    <EmbeddedResource Include="Assets\ClientLogos\ParkeCountyPublicLibrary.png" />
+    <EmbeddedResource Include="Assets\ClientLogos\GreentownPublicLibrary.png" />
+    <EmbeddedResource Include="Json\LincolnHeritagePublicLibrary.json" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">

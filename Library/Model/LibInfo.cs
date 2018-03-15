@@ -15,8 +15,10 @@ namespace Library
             {"Benton Harbor Public Library", "BentonHarborPublicLibrary.json"},
             {"Brooks-Iroquois-Washington Public Library", "BrooksIroquoisWashingtonPublicLibrary.json"},
             {"Crawfordsville District Public Library", "CrawfordsvilleDistrictPublicLibrary.json"},
-            //{"Flora Monroe Township Public Library","FloraMonroeTownshipPublicLibrary.json"},
-            //{"Francesville Salem Township Public Library", "FrancesvilleSalemTownshipPublicLibrary.json"},
+            {"Flora Monroe Township Public Library","FloraMonroeTownshipPublicLibrary.json"},
+            {"Francesville Salem Township Public Library", "FrancesvilleSalemTownshipPublicLibrary.json"},
+            {"Greentown Public Library", "GreentownPublicLibrary.json"},
+            {"Lincoln Heritage Public Library", "LincolnHeritagePublicLibrary.json"},
             //{"Parke County Public Library", "ParkeCountyPublicLibrary.json"},
             {"Perry County Public Library", "PerryCountyPublicLibrary.json"},
 

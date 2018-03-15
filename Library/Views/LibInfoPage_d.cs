@@ -62,8 +62,9 @@ namespace Library
                 {
                     
                     VerticalOptions = LayoutOptions.CenterAndExpand,HorizontalOptions = LayoutOptions.CenterAndExpand,
-                    WidthRequest = libInfo.Items[i].image != string.Empty ? 320 : 0,
-                    HeightRequest = libInfo.Items[i].image != string.Empty ? 130 : 0,
+                    WidthRequest = 320,
+                    HeightRequest = 130,
+                    IsVisible = string.IsNullOrEmpty(libInfo.Items[i].image) ? false : true,
                     Source =  ImageSource.FromResource(LibInfo.Imagefolderclinetlogos + lib.Items[i].image, typeof(LibInfoPage_d)),
 
                 }, 0, 3, 0, 1);
@@ -115,8 +116,12 @@ namespace Library
 
                     Command = new Command(o =>
                     {
-                        Device.OpenUri(new Uri("mailto:" + libInfo.Items[int.Parse(o.ToString())].email ));
+                        Device.OpenUri(new Uri("mailto:" + libInfo.Items[int.Parse(o.ToString())].email));
                     }),
+
+
+                    IsVisible = string.IsNullOrEmpty(libInfo.Items[i].email) ? false : true,
+
                     Text = libInfo.Items[i].email,
 
                     TextColor = Color.FromHex(libInfo.TextColor),
